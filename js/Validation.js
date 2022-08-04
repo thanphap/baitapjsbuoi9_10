@@ -74,7 +74,7 @@ function Validation() {
     }
 
     this.checkDay = function (inputVal, spanId, message) {
-        var pattern = /\b(0?[1-9]|1[012])[\/\-.](0?[1-9]|[12]\d|3[01])[\/\-.](\d{2}|\d{4})\b$/;
+        var pattern = /^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/;
         if (inputVal.match(pattern)) {
             document.getElementById(spanId).innerHTML = "";
             document.getElementById(spanId).style.display = "none";
